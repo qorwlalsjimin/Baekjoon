@@ -15,17 +15,14 @@ public class Q1546 {
 			score[i] = scan.nextInt();
 		
 		int max = 0;
-		for(int i = 0; i<score.length-1; i++) {
-			if(score[i]>score[i+1])
-				max = score[i];
-			else
-				max = score[i+1];
-		}
+		for(int i = 0; i<score.length; i++) {
+		if(score[i]>max)
+			max = score[i];
+		}//for
 
 		float sum = 0;
 		for(int i = 0; i<score.length; i++) {
 			result[i] = ((double)score[i]/(double)max)*100;
-			System.out.println(result[i]);
 			sum += result[i];
 		}
 
